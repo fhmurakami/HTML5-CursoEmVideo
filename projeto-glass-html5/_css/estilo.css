@@ -1,0 +1,283 @@
+@charset "UTF-8"; /* Permite utilizar acentuação */
+
+/* Importação da fonte 'Titillium Web' do Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+/* Adicionar tipo de fonte que possuo no computador */
+@font-face{
+	font-family: 'FonteLogo';
+	src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #dddddd;;
+	color: rgba(0, 0, 0, 1);
+}
+
+/* Formatação da interface */
+div#interface {
+	width: 900px; /* largura */
+	background-color: #ffffff; /* cor de fundo */
+	/* Centralizando a interface */
+	margin: -20px auto 0px auto; /*margem: cima direita baixo esquerda */
+	box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+	padding: 10px; /* cima direita baixo esquerda */	
+}
+
+/* Formatação de parágrafos */
+p {
+	text-align: justify;
+	text-indent: 50px;
+}
+
+/* Formatação dos links */
+a {
+	color: #606060;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* Posicionando o ícone (óculos) */
+header#cabecalho img#icone {
+	position: absolute;
+	left: 780px;
+	top: 70px;
+}
+
+/* Formatação do cabeçalho */
+header#cabecalho {
+	border-bottom: 1px #606060 solid; /* Borda inferior: largura cor tipo */
+	height: 150px; /* Altura do cabeçalho */
+	background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px; /* Define uma imagem como fundo. url("endereço_da_imagem");*/
+}
+
+header#cabecalho h1 {
+	font-family: 'FonteLogo', sans-serif;
+	font-size: 30pt;
+	color: #606060;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+	padding: 0px;
+	margin-bottom: 0px;
+}
+
+header#cabecalho h2 {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 15pt;
+	color: #888888;
+	padding: 0px;
+	margin-top: 0px;
+}
+
+/* Formatação de imagens com legendas */
+figure.foto-legenda {
+	position: relative; /* posição relativa ao código html (onde foi colocado) */
+	/* Criar borda */
+	border: 8px solid white; /* largura tipo cor */
+	/* Criar sombra */
+	box-shadow: 1px 1px 4px black; /* horizontal vertical espalhamento cor */
+	
+}
+
+/* Define altura e largura de tudo que for 'img', na classe 'foto-legenda' da tag 'figure' */
+figure.foto-legenda img {
+	width: 100%;
+	height: 100%;
+}
+
+/* Estilo de 'figcaption' para a classe 'foto-legenda' */
+figure.foto-legenda figcaption {
+	opacity: 0;
+	position: absolute; /* Posição absoluta dentro do seu container (borda branca) */
+	top: 0px;
+	background-color: rgba(0, 0, 0, .4);
+	color: white;
+	width: 100%;
+	height: 30%;
+	padding: 10px; /* margem */
+	box-sizing: border-box; /* Cria um box dentro da borda branca */
+	transition: opacity 1s; /* efeito de transição sobre a opacidade, com duração de 1 segundo */
+}
+
+/* 'hover' seta uma formatação específica ao passar o mouse sobre o objeto (figcaption) */
+figure.foto-legenda:hover figcaption {
+	opacity: 1;
+}
+
+/* Formatação do MENU */
+
+/* Menu flutuante */
+nav#menu {
+	display: block;
+}
+
+/* Estilo de UL para 'menu' */
+nav#menu ul {
+	list-style: none; /* Não utiliza simbolos nos itens */
+	text-transform: uppercase; /* transforma as letras em maiúsculas */
+	position: absolute; /* Permite que passe por cima dos documentos */
+	top: -18px;
+	left: 300px;
+}
+
+/* Formatação dos itens do menu) */
+nav#menu li {
+	display: inline-block; /* Mostra os itens na horizontal */
+	background-color: #dddddd;
+	padding: 10px; /* Borda dentro do objeto */
+	margin: 2px; /* Borda exterior ao objeto */
+	transition: background-color 1s;
+} 
+
+nav#menu li:hover {
+	background-color: #606060;
+}
+
+/* Esconde o título "Menu principal" */
+nav#menu h1 {
+	display: none;
+}
+
+/* Estilo dos links do menu */
+nav#menu a {
+	color: #000000; /* Cor do texto: preto */
+	text-decoration: none; /* retira o sublinhado */
+}
+
+nav#menu a:hover {
+	color: #ffffff; /* Muda a cor do texto para branco ao passar o cursor sobre o objeto */
+	text-decoration: underline; /* Sublinha o texto */
+}
+
+/* Formatação da section "corpo" */
+section#corpo {
+	display: block;
+	width: 500px;
+	float: left;
+	border-right: 1px solid #606060;
+	padding-right: 15px;
+}
+
+article#noticia-principal h2 {
+	font-size: 13pt;
+	color: #606060;
+	background-color: #dddddd;
+	padding: 5px 0px 5px 10px;
+	margin: 10px 0px 10px 0px;
+}
+
+/* Formatação do cabeçalho do artigo */
+header#cabecalho-artigo h1 {
+	font-family: 'FonteLogo', sans-serif;
+	font-size: 20pt;
+	color: #606060;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+header#cabecalho-artigo h2 {
+	font-size: 13pt;
+	color: #cecece;
+	background-color: transparent;
+	margin: 0px;
+}
+
+header#cabecalho-artigo h3 {
+	font-size: 10pt;
+	color: #606060;
+}
+
+.direita {
+	text-align: right;
+}
+
+/* Formatação da tabela */
+table#tabelaspec {
+	border: 1px solid #606060;
+	border-spacing: 0px; /* Retira os espaços entre as células */
+	/* Centraliza a tabela */
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+/* Formatação do título da tabela */
+table#tabelaspec caption {
+	color: #888888;
+	font-size: 13pt;
+	font-weight: bolder;
+}
+
+
+table#tabelaspec caption span {
+	display: block;
+	float: right;
+	color: #000000;
+	font-size: 8pt;
+	margin-top: 10px;
+}
+
+/* Formatação das células */
+table#tabelaspec td{
+	border: 1px solid #606060;
+	padding: 10px;
+	text-align: center;
+	vertical-align: middle; /* top, middle ou bottom */
+}
+
+/* Formatação da coluna da esquerda */
+table#tabelaspec td.ce {
+	color: #ffffff;
+	background-color:#606060;
+	vertical-align: top;
+	text-align: right;
+	font-weight: bold;
+}
+
+/* Formatação da coluna da direita */
+table#tabelaspec td.cd {
+	background-color: #cecece;
+	text-align: left;
+}
+
+/* Formatação da seção "lateral" */
+aside#lateral {
+	display: block;
+	width: 350px;
+	float: right;
+	background-color: #dddddd;
+	padding: 10px;
+	margin-top: 10px;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+/* Formatação dos títulos da barra lateral */
+aside#lateral h1 {
+	margin-top: 0px;
+	font-family: 'FonteLogo', sans-serif;
+	font-size: 20 pt;
+	color: #606060;
+}
+
+aside#lateral h2 {
+	background-color: #606060;
+	font-size: 13pt;
+	color: #ffffff;
+	padding: 5px;
+}
+
+/* Formatação do rodapé */
+footer#rodape {
+	clear: both; /* Limpa a configuração de ambos os lados. Faz o conteúdo do rodapé ser mostrado fora da divisão criada pelas outras seções */
+	border-top: 1px solid #606060;
+}
+/* Centralizar texto do rodapé */
+footer#rodape p {
+	text-align: center;
+}
+
+footer#rodape a {
+	color: #000000; /* Cor do texto: preto */
+}
